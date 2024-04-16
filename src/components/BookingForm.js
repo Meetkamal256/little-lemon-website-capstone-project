@@ -5,17 +5,17 @@ const BookingForm = (props) => {
   const [times, setTimes] = useState("");
   const [guests, setGuests] = useState("");
   const [occasion, setOccasion] = useState("");
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     props.submitForm(e);
   };
-
+  
   const handleChange = (e) => {
     setDate(e);
     props.dispatch(e);
   };
-
+  
   return (
     <header>
       <section>
@@ -31,7 +31,7 @@ const BookingForm = (props) => {
                 required
               />
             </div>
-
+            
             <div>
               <label htmlFor="book-time">Choose Time:</label>
               <select
@@ -46,7 +46,7 @@ const BookingForm = (props) => {
                 })}
               </select>
             </div>
-
+            
             <div>
               <label htmlFor="book-guests">Number of Guests:</label>
               <input
@@ -60,7 +60,7 @@ const BookingForm = (props) => {
                 required
               />
             </div>
-
+            
             <div>
               <label htmlFor="book-occasion">Occasion:</label>
               <select
@@ -75,7 +75,7 @@ const BookingForm = (props) => {
                 <option>Anniversary</option>
               </select>
             </div>
-
+            
             <div className="btnReceive">
               <input
                 aria-label="On Click"

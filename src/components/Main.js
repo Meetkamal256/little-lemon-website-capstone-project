@@ -13,7 +13,7 @@ const Main = () => {
       return (s = (s * a) % m) / m;
     };
   };
-
+  
   const fetchAPI = function (date) {
     let result = [];
     let random = seedRandom(date.getDate());
@@ -27,24 +27,24 @@ const Main = () => {
     }
     return result;
   };
-
+  
   const submitAPI = function (formData) {
     return true;
   };
   const initialState = { availableTimes: fetchAPI(new Date()) };
   const [state, dispatch] = useReducer(updateTimes, initialState);
-
+  
   function updateTimes(state, date) {
     return { availableTimes: fetchAPI(new Date()) };
   }
-
+  
   const navigate = useNavigate();
   function submitForm(formData) {
     if (submitAPI(formData)) {
       navigate("/confirmed");
     }
   }
-
+  
   return (
     <main>
       <Routes>
