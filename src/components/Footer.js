@@ -1,71 +1,54 @@
-import React from "react";
-import logo from "../images/Logo .svg";
+import footerLogo from '../assets/footerlogo.png';
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer>
-      <section>
-        <div className="company-info">
-          <img src={logo} alt="little lemon" />
-          <p>
-            We are a family owned Mediterraneran restaurant, focused on
-            traditional recipes served with a modern twist.
-          </p>
-        </div>
-        <div>
-          <h3>Important Links</h3>
+    <footer className="footer">
+      <img src={footerLogo} alt="Footer Logo" className="footer-logo" />
+      <div className="footer-text-content">
+        <nav className='footer-nav'>
+          <h1>Navigation</h1>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/home">Home</a>
             </li>
             <li>
-              <a href="/">About</a>
+              <a href="/booking">Reservations</a>
             </li>
             <li>
-              <a href="/">Menu</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href="/">Reservations</a>
+              <a href="/orderonline">Order Online</a>
             </li>
             <li>
-              <a href="/">Order Online</a>
-            </li>
-            <li>
-              <a href="/">Login</a>
+              <a href="/login">Login</a>
             </li>
           </ul>
-        </div>
-        <div>
-          <h3>Contact</h3>
+        </nav>
+        <section className="contact-info">
+          <h1>Contact</h1>
+          <p>Adrian</p>
+          <p>Little Lemon</p>
+          <p>926 Dunlop Ave</p>
+          <p>+17088488155</p>
+        </section>
+        <section className="social-links">
+          <h1>Social Media</h1>
           <ul>
             <li>
-              Address: <br /> 123 Towncity, USA
-            </li>
+              <a href="https://www.facebook.com">Facebook</a>
+              </li>
             <li>
-              Phone: <br /> ++ 0123 456 789
-            </li>
+              <a href="https://www.instagram.com">Instagram</a>
+              </li>
             <li>
-              Email: <br /> little@lemon.com
-            </li>
+              <a href="https://www.twitter.com">X</a>
+              </li>
           </ul>
-        </div>
-        <div>
-          <h3>Social Media Links</h3>
-          <ul>
-            <li>
-              <a href="/">Facebook</a>
-            </li>
-            <li>
-              <a href="/">Instagram</a>
-            </li>
-            <li>
-              <a href="/">Twitter</a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        </section>
+      </div>
     </footer>
   );
-};
+}
 
 export default Footer;
